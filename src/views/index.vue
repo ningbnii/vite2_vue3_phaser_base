@@ -9,9 +9,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import * as Phaser from "Phaser";
-import space3 from "../assets/space3.png";
-import logo from "../assets/phaser3-logo.png";
-import red from "../assets/red.png";
 let myCanvas = ref(null);
 let canvasBox = ref(null);
 onMounted(() => {
@@ -37,9 +34,9 @@ onMounted(() => {
   function preload() {
     // this.load.setBaseURL("http://labs.phaser.io");
 
-    this.load.image("sky", space3);
-    this.load.image("logo", logo);
-    this.load.image("red", red);
+    this.load.image("sky", "/src/assets/space3.png");
+    this.load.image("logo", "/src/assets/phaser3-logo.png");
+    this.load.image("red", "/src/assets/red.png");
   }
 
   function create() {
